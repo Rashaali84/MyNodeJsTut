@@ -27,3 +27,12 @@ Before creating an actual "Hello, World!" application using Node.js, let us see 
 1. `Import required modules`: We use the require directive to load Node.js modules.
 2. `Create server`: A server which will listen to client's requests similar to Apache HTTP Server.
 3. `Read request and return response`: The server created in an earlier step will read the HTTP request made by the client which can be a browser or a console and return the response.
+
+### REPL
+
+REPL stands for Read Eval Print Loop and it represents a computer environment like a Windows console or Unix/Linux shell where a command is entered and the system responds with an output in an interactive mode. Node.js or Node comes bundled with a REPL environment. It performs the following tasks:
+- Read - Reads user's input, parses the input into JavaScript data-structure, and stores in memory.
+- Eval - Takes and evaluates the data structure.
+- Print - Prints the result.
+- Loop - Loops the above command until the user presses ctrl-c twice.
+The REPL feature of Node is very useful in experimenting with Node.js codes and to debug JavaScript codes.
