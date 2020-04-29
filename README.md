@@ -36,3 +36,28 @@ REPL stands for Read Eval Print Loop and it represents a computer environment li
 - Print - Prints the result.
 - Loop - Loops the above command until the user presses ctrl-c twice.
 The REPL feature of Node is very useful in experimenting with Node.js codes and to debug JavaScript codes.
+
+Starting REPL
+REPL can be started by simply running node on shell/console without any arguments as follows.
+`$ node`
+
+### Node Package Manager (NPM) provides two main functionalities:
+
+- Online repositories for node.js packages/modules which are searchable on search.nodejs.org
+- Command line utility to install Node.js packages, do version management and dependency management of Node.js packages.
+NPM comes bundled with Node.js installables after v0.6.3 version. To verify the same, open console and type the following command and see the result:
+
+`$ npm --version`
+2.7.1
+
+If you are running an old version of NPM, then it is quite easy to update it to the latest version. Just use the following command from root:
+`$ sudo npm install npm -g`
+
+### Installing Modules using NPM
+
+There is a simple syntax to install any Node.js module:
+`$ npm install <Module Name>`
+For example, following is the command to install a famous Node.js web framework module called express:
+`$ npm install express`
+Now you can use this module in your js file as following:
+`var express = require('express');`
