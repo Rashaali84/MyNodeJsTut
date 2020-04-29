@@ -264,4 +264,25 @@ When an EventEmitter instance faces any error, it emits an 'error' event. When a
 
 EventEmitter provides multiple properties like on and emit. on property is used to bind a function with the event and emit is used to fire an event. 
 
+### How to parse command line arguments `argv` (short for 'argument values'). source link--> https://nodejs.org/en/knowledge/command-line/how-to-parse-command-line-arguments/
+
+Node.js exposes this array for every running process in the form of `process.argv` - let's take a look at an example. Make a file called argv.js and add this line:
+
+`console.log(process.argv);` // save this in args.js file
+
+now write in command line
+
+`$ node argv.js one two three four five
+[ 'node',
+  '/home/avian/argvdemo/argv.js',
+  'one',
+  'two',
+  'three',
+  'four',
+  'five' ]`
+  
+you'll want to skip the first two. Now try this in argv.js: --- >check this file argv.js in repo 
+
+`var myArgs = process.argv.slice(2);
+console.log('myArgs: ', myArgs);`
 
