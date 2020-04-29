@@ -167,9 +167,13 @@ to teach the world in simple and easy way!!!!!
 Create a js file named main.js with the following code:
 
 var fs = require("fs");
+
 var data = fs.readFileSync('input.txt');
+
 console.log(data.toString());
+
 console.log("Program Ended");
+
 
 Now run the main.js to see the result:
 
@@ -190,10 +194,15 @@ to teach the world in simple and easy way!!!!!
 Update `main.js` to have the following code:
 
 var fs = require("fs");
+
 fs.readFile('input.txt', function (err, data) {
+
 if (err) return console.error(err);
+
 console.log(data.toString());
+
 });
+
 console.log("Program Ended");
 
 Now run the main.js to see the result:
