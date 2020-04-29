@@ -243,3 +243,25 @@ Although events look quite similar to callbacks, the difference lies in the fact
 
 In Node Application, any async function accepts a callback as the last parameter and a callback function accepts an error as the first parameter. Let's revisit the previous example again. Create a text file named input.txt with the following content.
 
+### EVENT EMITTER -----> event-emitter.js
+
+Many objects in a Node emit events, for example, a net.Server emits an event each time a peer connects to it, an fs.readStream emits an event when the file is opened. All objects which emit events are the instances of events.EventEmitter.
+
+`EventEmitter Class`
+
+As we have seen in the previous section, EventEmitter class lies in the events module. It is accessible via the following code:
+
+// Import events module
+
+var events = require('events');
+
+// Create an eventEmitter object
+
+var eventEmitter = new events.EventEmitter();
+
+
+When an EventEmitter instance faces any error, it emits an 'error' event. When a new listener is added, 'newListener' event is fired and when a listener is removed, 'removeListener' event is fired.
+
+EventEmitter provides multiple properties like on and emit. on property is used to bind a function with the event and emit is used to fire an event. 
+
+
