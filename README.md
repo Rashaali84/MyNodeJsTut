@@ -222,7 +222,7 @@ These two examples explain the concept of blocking and non-blocking calls.
 
 Thus, a blocking program executes very much in sequence. From the programming point of view, it is easier to implement the logic but non-blocking programs do not execute in sequence. In case a program needs to use any data to be processed, it should be kept within the same block to make it sequential execution.
 
-### EVENT LOOP
+### EVENT LOOP  ---- > watch this amazing video .. https://www.youtube.com/watch?v=8aGhZQkoFbQ
 Node.js is a single-threaded application, but it can support concurrency via the concept of event and callbacks. Every API of Node.js is asynchronous and being single-threaded, they use async function calls to maintain concurrency. Node uses observer pattern. Node thread keeps an event loop and whenever a task gets completed, it fires the corresponding event which signals the event-listener function to execute.
 
 - Event-Driven Programming
