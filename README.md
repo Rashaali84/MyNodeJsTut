@@ -61,3 +61,27 @@ For example, following is the command to install a famous Node.js web framework 
 `$ npm install express`
 Now you can use this module in your js file as following:
 `var express = require('express');`
+
+### Global vs Local Installation
+
+By default, NPM installs any dependency in the local mode. Here local mode refers to the package installation in node_modules directory lying in the folder where Node application is present. Locally deployed packages are accessible via require() method. For example, when we installed express module, it created node_modules directory in the current directory where it installed the express module.
+
+`$ ls -l`
+
+total 0
+drwxr-xr-x 3 root root 20 Mar 17 02:23 node_modules
+
+Alternatively, you can use` npm ls` command to list down all the locally installed modules.
+
+Globally installed packages/dependencies are stored in system directory. Such dependencies can be used in CLI (Command Line Interface) function of any node.js but cannot be imported using require() in Node application directly. Now let's try installing the express module using global installation.
+
+`$ npm install express -g`
+
+You can use the following command to check all the modules installed globally:
+
+`$ npm ls -g`
+
+### Using package.json
+
+package.json is present in the root directory of any Node application/module and is used to define the properties of a package. Let's open package.json of express package present in node_modules/express/
+
