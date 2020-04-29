@@ -85,3 +85,33 @@ You can use the following command to check all the modules installed globally:
 
 package.json is present in the root directory of any Node application/module and is used to define the properties of a package. Let's open package.json of express package present in node_modules/express/
 
+### Attributes of Package.json
+
+- name - name of the package
+- version - version of the package
+- description - description of the package
+homepage - homepage of the package
+- author - author of the package
+- contributors - name of the contributors to the package
+- dependencies - list of dependencies. NPM automatically installs all the dependencies mentioned here in the node_module folder of the package.
+- repository - repository type and URL of the package
+- main - entry point of the package
+- keywords - keywords
+
+### Uninstalling a Module
+
+Use the following command to `uninstall` a Node.js module.
+`$ npm uninstall express`
+Once NPM uninstalls the package, you can verify it by looking at the content of /node_modules/ directory or type the following command:
+`$ npm ls`
+
+### Updating a Module
+
+Update package.json and change the version of the dependency to be updated and run the following command.
+`$ npm update express`
+
+### Search a Module
+
+Search a package name using NPM.
+`$ npm search express`
+
