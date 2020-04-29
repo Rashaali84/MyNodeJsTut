@@ -166,13 +166,13 @@ to teach the world in simple and easy way!!!!!
 
 Create a js file named main.js with the following code:
 
-var fs = require("fs");
+`var fs = require("fs");
 
 var data = fs.readFileSync('input.txt');
 
 console.log(data.toString());
 
-console.log("Program Ended");
+console.log("Program Ended");`
 
 
 Now run the main.js to see the result:
@@ -193,7 +193,7 @@ to teach the world in simple and easy way!!!!!
 
 Update `main.js` to have the following code:
 
-var fs = require("fs");
+`var fs = require("fs");
 
 fs.readFile('input.txt', function (err, data) {
 
@@ -203,7 +203,7 @@ console.log(data.toString());
 
 });
 
-console.log("Program Ended");
+console.log("Program Ended");`
 
 Now run the main.js to see the result:
 
@@ -221,3 +221,18 @@ These two examples explain the concept of blocking and non-blocking calls.
 - The second example shows that the program does not wait for file reading and proceeds to print "Program Ended" and at the same time, the program without blocking continues reading the file.
 
 Thus, a blocking program executes very much in sequence. From the programming point of view, it is easier to implement the logic but non-blocking programs do not execute in sequence. In case a program needs to use any data to be processed, it should be kept within the same block to make it sequential execution.
+
+### EVENT LOOP
+Node.js is a single-threaded application, but it can support concurrency via the concept of event and callbacks. Every API of Node.js is asynchronous and being single-threaded, they use async function calls to maintain concurrency. Node uses observer pattern. Node thread keeps an event loop and whenever a task gets completed, it fires the corresponding event which signals the event-listener function to execute.
+
+- Event-Driven Programming
+
+Node.js uses events heavily and it is also one of the reasons why Node.js is pretty fast compared to other similar technologies. As soon as Node starts its server, it simply initiates its variables, declares functions, and then simply waits for the event to occur.
+
+In an event-driven application, there is generally a main loop that listens for events, and then triggers a callback function when one of those events is detected
+
+![image](https://user-images.githubusercontent.com/30797974/80552188-18279a80-89c6-11ea-83f8-c97a5a79d4a7.png)
+
+Although events look quite similar to callbacks, the difference lies in the fact that callback functions are called when an asynchronous function returns its result, whereas event handling works on the observer pattern. The functions that listen to events act as Observers. Whenever an event gets fired, its listener function starts executing. Node.js has multiple in-built events available through events module and EventEmitter class which are used to bind events and event-listeners as follows:
+
+
