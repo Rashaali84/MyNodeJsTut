@@ -101,17 +101,53 @@ homepage - homepage of the package
 ### Uninstalling a Module
 
 Use the following command to `uninstall` a Node.js module.
+
 `$ npm uninstall express`
+
 Once NPM uninstalls the package, you can verify it by looking at the content of /node_modules/ directory or type the following command:
+
 `$ npm ls`
 
 ### Updating a Module
 
 Update package.json and change the version of the dependency to be updated and run the following command.
+
 `$ npm update express`
 
 ### Search a Module
 
 Search a package name using NPM.
+
 `$ npm search express`
 
+### Create a Module
+
+Creating a module requires package.json to be generated. Let's generate package.json using NPM, which will generate the basic skeleton of the package.json.
+
+`$ npm init`
+
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sane defaults.
+See 'npm help json' for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg> --save` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+
+`name: (webmaster)`
+
+You will need to provide all the required information about your module. You can take help from the above-mentioned package.json file to understand the meanings of various information demanded. Once package.json is generated, use the following command to register yourself with NPM repository site using a valid email address.
+
+`$ npm adduser`
+
+`Username: mcmohd`
+`Password:`
+`Email: (this IS public) mcmohd@gmail.com`
+
+It is time now to publish your module:
+
+`$ npm publish`
+
+If everything is fine with your module, then it will be published in the repository and will be accessible to install using NPM like any other Node.js module.
