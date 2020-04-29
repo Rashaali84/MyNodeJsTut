@@ -222,7 +222,8 @@ These two examples explain the concept of blocking and non-blocking calls.
 
 Thus, a blocking program executes very much in sequence. From the programming point of view, it is easier to implement the logic but non-blocking programs do not execute in sequence. In case a program needs to use any data to be processed, it should be kept within the same block to make it sequential execution.
 
-### EVENT LOOP  ---- > watch this amazing video .. https://www.youtube.com/watch?v=8aGhZQkoFbQ
+### EVENT LOOP  
+ watch this amazing video .. https://www.youtube.com/watch?v=8aGhZQkoFbQ
 
 Node.js is a single-threaded application, but it can support concurrency via the concept of event and callbacks. Every API of Node.js is asynchronous and being single-threaded, they use async function calls to maintain concurrency. Node uses observer pattern. Node thread keeps an event loop and whenever a task gets completed, it fires the corresponding event which signals the event-listener function to execute.
 
@@ -243,7 +244,9 @@ Although events look quite similar to callbacks, the difference lies in the fact
 
 In Node Application, any async function accepts a callback as the last parameter and a callback function accepts an error as the first parameter. Let's revisit the previous example again. Create a text file named input.txt with the following content.
 
-### EVENT EMITTER -----> event-emitter.js
+### EVENT EMITTER 
+
+-----> event-emitter.js
 
 Many objects in a Node emit events, for example, a net.Server emits an event each time a peer connects to it, an fs.readStream emits an event when the file is opened. All objects which emit events are the instances of events.EventEmitter.
 
@@ -264,7 +267,9 @@ When an EventEmitter instance faces any error, it emits an 'error' event. When a
 
 EventEmitter provides multiple properties like on and emit. on property is used to bind a function with the event and emit is used to fire an event. 
 
-### How to parse command line arguments `argv` (short for 'argument values'). source link--> https://nodejs.org/en/knowledge/command-line/how-to-parse-command-line-arguments/
+### How to parse command line arguments `argv` (short for 'argument values'). 
+
+source link--> https://nodejs.org/en/knowledge/command-line/how-to-parse-command-line-arguments/
 
 Node.js exposes this array for every running process in the form of `process.argv` - let's take a look at an example. Make a file called argv.js and add this line:
 
@@ -286,3 +291,4 @@ you'll want to skip the first two. Now try this in argv.js: --- >check this file
 `var myArgs = process.argv.slice(2);
 console.log('myArgs: ', myArgs);`
 
+###Cleaner way for arguments values 
